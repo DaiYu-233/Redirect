@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>重定向</title>
     <style>
-      *{
+      @font-face {
+        font-family: ZhuZiAYuanJWD;
+        src: url(https://cdn.cbd.int/anzhiyu-blog@1.1.6/fonts/ZhuZiAWan.woff2);
+        font-display: swap;
+        font-weight: lighter;
+      }
+      * {
         margin: 0;
+        font-family: ZhuZiAYuanJWD;
+      }
+      p{
+        margin: 20px;
+      }
+      a {
+        color: #49b1f5;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -20,9 +37,9 @@
         console.log(host);
         var url = "";
         if (host == "daiyu-233.top") {
-          url = "daiyu.fun";
+          url = "https://daiyu.fun";
         } else if (host == "ymcl.daiyu-233.top") {
-          url = "ymcl.daiyu.fun";
+          url = "https://ymcl.daiyu.fun";
         } else {
           el.innerHTML = "Error";
           return;
