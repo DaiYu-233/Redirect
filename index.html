@@ -11,15 +11,16 @@
     <script>
       function Redirect() {
         var el = document.getElementById("msg");
+        var host = window.location.hostname;
+        console.log(host);
         var url = "";
-        switch (window.location.hostname) {
-          case "daiyu-233.top":
-            url = "daiyu.fun";
-          case "ymcl.daiyu-233.top":
-            url = "ymcl.daiyu.fun";
-          default:
-            el.innerHTML = "Error";
-            return;
+        if (host == "daiyu-233.top") {
+          url = "daiyu.fun";
+        } else if (host == "ymcl.daiyu-233.top") {
+          url = "ymcl.daiyu.fun";
+        } else {
+          el.innerHTML = "Error";
+          return;
         }
         el.innerHTML = `${window.location.hostname} 现已移动到：<a href="${url}">${url}</a>`;
       }
